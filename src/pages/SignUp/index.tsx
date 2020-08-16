@@ -16,7 +16,7 @@ import Button from '../../components/Button';
 import { Container, Content, AnimationContainer, Background } from './styles';
 
 interface SignUpFormData {
-  nome: string;
+  name: string;
   email: string;
   password: string;
 }
