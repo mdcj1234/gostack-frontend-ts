@@ -1,6 +1,4 @@
 /* eslint-disable object-curly-newline */
-/* eslint-disable object-curly-spacing */
-/* eslint-disable import/no-unresolved */
 import React, {
   InputHTMLAttributes,
   useEffect,
@@ -18,7 +16,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   // eslint-disable-next-line @typescript-eslint/ban-types
   containerStyle?: object;
-  icon: React.ComponentType<IconBaseProps>;
+  icon?: React.ComponentType<IconBaseProps>;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -56,6 +54,7 @@ const Input: React.FC<InputProps> = ({
       isErrored={!!error}
       isFocused={isFocused}
       isFilled={isFilled}
+      data-testid="input-container"
     >
       {Icon && <Icon size={20} />}
       <input
